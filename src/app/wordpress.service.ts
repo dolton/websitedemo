@@ -10,10 +10,6 @@ export class WordpressService {
   constructor(private http: HttpClient) { }
 
   getPosts(): Observable<any[]> {
-    return this.http.get<any[]>('http://www.oxygenna.com/wp-json/wp/v2/posts?_embed', {
-      params: {
-        per_page: '6'
-      }
-    });
+    return this.http.get<any[]>('https://api.exchangeratesapi.io/latest');
   }
 }
